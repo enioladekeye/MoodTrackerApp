@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
             trackBar1 = new TrackBar();
             textBox1 = new TextBox();
             label1 = new Label();
@@ -42,72 +36,22 @@
             label4 = new Label();
             trackBar2 = new TrackBar();
             groupBox1 = new GroupBox();
-            button7 = new Button();
+            btnSave = new Button();
             dateTimePicker1 = new DateTimePicker();
             splitter1 = new Splitter();
-            splitContainer1 = new SplitContainer();
+            button5 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button6 = new Button();
+            button1 = new Button();
+            panel1 = new Panel();
+            listBox1 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(0, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(60, 60);
-            button1.TabIndex = 0;
-            button1.Text = "Dead Inside";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(7, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(60, 60);
-            button2.TabIndex = 1;
-            button2.Text = "Awful";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(73, 5);
-            button3.Name = "button3";
-            button3.Size = new Size(60, 60);
-            button3.TabIndex = 2;
-            button3.Text = "Bad";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(139, 5);
-            button4.Name = "button4";
-            button4.Size = new Size(60, 60);
-            button4.TabIndex = 3;
-            button4.Text = "Alright";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(205, 5);
-            button5.Name = "button5";
-            button5.Size = new Size(60, 60);
-            button5.TabIndex = 4;
-            button5.Text = "Good";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            button6.Location = new Point(271, 5);
-            button6.Name = "button6";
-            button6.Size = new Size(60, 60);
-            button6.TabIndex = 5;
-            button6.Text = "Great!";
-            button6.UseVisualStyleBackColor = true;
             // 
             // trackBar1
             // 
@@ -120,7 +64,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(366, 333);
+            textBox1.Location = new Point(13, 314);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(407, 127);
@@ -130,7 +74,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label1.Location = new Point(366, 30);
+            label1.Location = new Point(13, 11);
             label1.Name = "label1";
             label1.Size = new Size(118, 15);
             label1.TabIndex = 8;
@@ -150,7 +94,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label3.Location = new Point(366, 315);
+            label3.Location = new Point(13, 296);
             label3.Name = "label3";
             label3.Size = new Size(38, 15);
             label3.TabIndex = 10;
@@ -181,24 +125,25 @@
             groupBox1.Controls.Add(trackBar1);
             groupBox1.Controls.Add(trackBar2);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(366, 132);
+            groupBox1.Location = new Point(13, 113);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(407, 174);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             // 
-            // button7
+            // btnSave
             // 
-            button7.Location = new Point(366, 479);
-            button7.Name = "button7";
-            button7.Size = new Size(407, 50);
-            button7.TabIndex = 14;
-            button7.Text = "Save Entry";
-            button7.UseVisualStyleBackColor = true;
+            btnSave.Location = new Point(13, 460);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(407, 50);
+            btnSave.TabIndex = 14;
+            btnSave.Text = "Save Entry";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(541, 30);
+            dateTimePicker1.Location = new Point(188, 11);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(232, 23);
             dateTimePicker1.TabIndex = 15;
@@ -211,39 +156,96 @@
             splitter1.TabIndex = 16;
             splitter1.TabStop = false;
             // 
-            // splitContainer1
+            // button5
             // 
-            splitContainer1.Location = new Point(366, 65);
-            splitContainer1.Name = "splitContainer1";
+            button5.Location = new Point(294, 47);
+            button5.Name = "button5";
+            button5.Size = new Size(60, 60);
+            button5.TabIndex = 4;
+            button5.Text = "Good";
+            button5.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1.Panel1
+            // button4
             // 
-            splitContainer1.Panel1.Controls.Add(button1);
+            button4.Location = new Point(228, 47);
+            button4.Name = "button4";
+            button4.Size = new Size(60, 60);
+            button4.TabIndex = 3;
+            button4.Text = "Alright";
+            button4.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1.Panel2
+            // button3
             // 
-            splitContainer1.Panel2.Controls.Add(button6);
-            splitContainer1.Panel2.Controls.Add(button2);
-            splitContainer1.Panel2.Controls.Add(button3);
-            splitContainer1.Panel2.Controls.Add(button4);
-            splitContainer1.Panel2.Controls.Add(button5);
-            splitContainer1.Size = new Size(407, 70);
-            splitContainer1.SplitterDistance = 65;
-            splitContainer1.TabIndex = 17;
+            button3.Location = new Point(162, 47);
+            button3.Name = "button3";
+            button3.Size = new Size(60, 60);
+            button3.TabIndex = 2;
+            button3.Text = "Bad";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(96, 47);
+            button2.Name = "button2";
+            button2.Size = new Size(60, 60);
+            button2.TabIndex = 1;
+            button2.Text = "Awful";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(360, 47);
+            button6.Name = "button6";
+            button6.Size = new Size(60, 60);
+            button6.TabIndex = 5;
+            button6.Text = "Great!";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(13, 47);
+            button1.Name = "button1";
+            button1.Size = new Size(60, 60);
+            button1.TabIndex = 0;
+            button1.Text = "Dead Inside";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(btnSave);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(button6);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(dateTimePicker1);
+            panel1.Location = new Point(202, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(434, 523);
+            panel1.TabIndex = 17;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(12, 12);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(172, 514);
+            listBox1.TabIndex = 18;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 547);
-            Controls.Add(splitContainer1);
+            ClientSize = new Size(648, 547);
+            Controls.Add(listBox1);
+            Controls.Add(panel1);
             Controls.Add(splitter1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(button7);
-            Controls.Add(groupBox1);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(textBox1);
             Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             Name = "Form1";
             Text = "Form1";
@@ -251,22 +253,12 @@
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
         private TrackBar trackBar1;
         private TextBox textBox1;
         private Label label1;
@@ -275,9 +267,16 @@
         private Label label4;
         private TrackBar trackBar2;
         private GroupBox groupBox1;
-        private Button button7;
+        private Button btnSave;
         private DateTimePicker dateTimePicker1;
         private Splitter splitter1;
-        private SplitContainer splitContainer1;
+        private Button button5;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button6;
+        private Button button1;
+        private Panel panel1;
+        private ListBox listBox1;
     }
 }
