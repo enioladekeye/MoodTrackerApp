@@ -28,47 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            trackBar1 = new TrackBar();
-            textBox1 = new TextBox();
+            numStress = new TrackBar();
+            txtNotes = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            trackBar2 = new TrackBar();
+            numEnergy = new TrackBar();
             groupBox1 = new GroupBox();
             btnSave = new Button();
             dateTimePicker1 = new DateTimePicker();
             splitter1 = new Splitter();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button6 = new Button();
-            button1 = new Button();
+            btnMood4 = new Button();
+            btnMood3 = new Button();
+            btnMood2 = new Button();
+            btnMood1 = new Button();
+            btnMood5 = new Button();
+            btnMood0 = new Button();
             panel1 = new Panel();
             listBox1 = new ListBox();
-            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numStress).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numEnergy).BeginInit();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // trackBar1
+            // numStress
             // 
-            trackBar1.LargeChange = 3;
-            trackBar1.Location = new Point(17, 48);
-            trackBar1.Maximum = 9;
-            trackBar1.Name = "trackBar1";
-            trackBar1.Size = new Size(352, 45);
-            trackBar1.TabIndex = 6;
+            numStress.LargeChange = 3;
+            numStress.Location = new Point(17, 48);
+            numStress.Maximum = 9;
+            numStress.Name = "numStress";
+            numStress.Size = new Size(352, 45);
+            numStress.TabIndex = 6;
             // 
-            // textBox1
+            // txtNotes
             // 
-            textBox1.Location = new Point(13, 314);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(407, 127);
-            textBox1.TabIndex = 7;
+            txtNotes.Location = new Point(13, 314);
+            txtNotes.Multiline = true;
+            txtNotes.Name = "txtNotes";
+            txtNotes.Size = new Size(407, 127);
+            txtNotes.TabIndex = 7;
             // 
             // label1
             // 
@@ -110,20 +110,20 @@
             label4.TabIndex = 12;
             label4.Text = "Energy";
             // 
-            // trackBar2
+            // numEnergy
             // 
-            trackBar2.LargeChange = 3;
-            trackBar2.Location = new Point(17, 109);
-            trackBar2.Maximum = 9;
-            trackBar2.Name = "trackBar2";
-            trackBar2.Size = new Size(352, 45);
-            trackBar2.TabIndex = 11;
+            numEnergy.LargeChange = 3;
+            numEnergy.Location = new Point(17, 109);
+            numEnergy.Maximum = 9;
+            numEnergy.Name = "numEnergy";
+            numEnergy.Size = new Size(352, 45);
+            numEnergy.TabIndex = 11;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(trackBar1);
-            groupBox1.Controls.Add(trackBar2);
+            groupBox1.Controls.Add(numStress);
+            groupBox1.Controls.Add(numEnergy);
             groupBox1.Controls.Add(label2);
             groupBox1.Location = new Point(13, 113);
             groupBox1.Name = "groupBox1";
@@ -156,73 +156,75 @@
             splitter1.TabIndex = 16;
             splitter1.TabStop = false;
             // 
-            // button5
+            // btnMood4
             // 
-            button5.Location = new Point(294, 47);
-            button5.Name = "button5";
-            button5.Size = new Size(60, 60);
-            button5.TabIndex = 4;
-            button5.Text = "Good";
-            button5.UseVisualStyleBackColor = true;
+            btnMood4.Location = new Point(294, 47);
+            btnMood4.Name = "btnMood4";
+            btnMood4.Size = new Size(60, 60);
+            btnMood4.TabIndex = 4;
+            btnMood4.Text = "Good";
+            btnMood4.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnMood3
             // 
-            button4.Location = new Point(228, 47);
-            button4.Name = "button4";
-            button4.Size = new Size(60, 60);
-            button4.TabIndex = 3;
-            button4.Text = "Alright";
-            button4.UseVisualStyleBackColor = true;
+            btnMood3.Location = new Point(228, 47);
+            btnMood3.Name = "btnMood3";
+            btnMood3.Size = new Size(60, 60);
+            btnMood3.TabIndex = 3;
+            btnMood3.Text = "Alright";
+            btnMood3.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnMood2
             // 
-            button3.Location = new Point(162, 47);
-            button3.Name = "button3";
-            button3.Size = new Size(60, 60);
-            button3.TabIndex = 2;
-            button3.Text = "Bad";
-            button3.UseVisualStyleBackColor = true;
+            btnMood2.Location = new Point(162, 47);
+            btnMood2.Name = "btnMood2";
+            btnMood2.Size = new Size(60, 60);
+            btnMood2.TabIndex = 2;
+            btnMood2.Text = "Bad";
+            btnMood2.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnMood1
             // 
-            button2.Location = new Point(96, 47);
-            button2.Name = "button2";
-            button2.Size = new Size(60, 60);
-            button2.TabIndex = 1;
-            button2.Text = "Awful";
-            button2.UseVisualStyleBackColor = true;
+            btnMood1.Location = new Point(96, 47);
+            btnMood1.Name = "btnMood1";
+            btnMood1.Size = new Size(60, 60);
+            btnMood1.TabIndex = 1;
+            btnMood1.Text = "Awful";
+            btnMood1.UseVisualStyleBackColor = true;
+            btnMood1.Click += btnMood1_Click;
             // 
-            // button6
+            // btnMood5
             // 
-            button6.Location = new Point(360, 47);
-            button6.Name = "button6";
-            button6.Size = new Size(60, 60);
-            button6.TabIndex = 5;
-            button6.Text = "Great!";
-            button6.UseVisualStyleBackColor = true;
+            btnMood5.Location = new Point(360, 47);
+            btnMood5.Name = "btnMood5";
+            btnMood5.Size = new Size(60, 60);
+            btnMood5.TabIndex = 5;
+            btnMood5.Text = "Great!";
+            btnMood5.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnMood0
             // 
-            button1.Location = new Point(13, 47);
-            button1.Name = "button1";
-            button1.Size = new Size(60, 60);
-            button1.TabIndex = 0;
-            button1.Text = "Dead Inside";
-            button1.UseVisualStyleBackColor = true;
+            btnMood0.Location = new Point(13, 47);
+            btnMood0.Name = "btnMood0";
+            btnMood0.Size = new Size(60, 60);
+            btnMood0.TabIndex = 0;
+            btnMood0.Text = "Dead Inside";
+            btnMood0.UseVisualStyleBackColor = true;
+            btnMood0.Click += button1_Click;
             // 
             // panel1
             // 
             panel1.Controls.Add(btnSave);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(button6);
+            panel1.Controls.Add(btnMood0);
+            panel1.Controls.Add(txtNotes);
+            panel1.Controls.Add(btnMood5);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnMood1);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(btnMood2);
             panel1.Controls.Add(groupBox1);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(btnMood4);
+            panel1.Controls.Add(btnMood3);
             panel1.Controls.Add(dateTimePicker1);
             panel1.Location = new Point(202, 12);
             panel1.Name = "panel1";
@@ -249,8 +251,8 @@
             Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numStress).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numEnergy).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -259,23 +261,23 @@
         }
 
         #endregion
-        private TrackBar trackBar1;
-        private TextBox textBox1;
+        private TrackBar numStress;
+        private TextBox txtNotes;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
-        private TrackBar trackBar2;
+        private TrackBar numEnergy;
         private GroupBox groupBox1;
         private Button btnSave;
         private DateTimePicker dateTimePicker1;
         private Splitter splitter1;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button6;
-        private Button button1;
+        private Button btnMood4;
+        private Button btnMood3;
+        private Button btnMood2;
+        private Button btnMood1;
+        private Button btnMood5;
+        private Button btnMood0;
         private Panel panel1;
         private ListBox listBox1;
     }
