@@ -164,6 +164,7 @@
             btnMood4.TabIndex = 4;
             btnMood4.Text = "Good";
             btnMood4.UseVisualStyleBackColor = true;
+            btnMood4.Click += btnMood4_Click_1;
             // 
             // btnMood3
             // 
@@ -173,6 +174,7 @@
             btnMood3.TabIndex = 3;
             btnMood3.Text = "Alright";
             btnMood3.UseVisualStyleBackColor = true;
+            btnMood3.Click += btnMood3_Click_1;
             // 
             // btnMood2
             // 
@@ -182,6 +184,7 @@
             btnMood2.TabIndex = 2;
             btnMood2.Text = "Bad";
             btnMood2.UseVisualStyleBackColor = true;
+            btnMood2.Click += btnMood2_Click_1;
             // 
             // btnMood1
             // 
@@ -201,6 +204,7 @@
             btnMood5.TabIndex = 5;
             btnMood5.Text = "Great!";
             btnMood5.UseVisualStyleBackColor = true;
+            btnMood5.Click += btnMood5_Click_1;
             // 
             // btnMood0
             // 
