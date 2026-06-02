@@ -29,26 +29,52 @@ namespace MoodTrackerApp
             {
 
             }
+
+            clearEntry();
         }
-
-
 
         //Mood buttons, settingt the current mood to the text of the button thats clicked basically
         private void button1_Click(object sender, EventArgs e)
         {
             CurrentMood = btnMood0.Text;
             clearColours();
-            btnMood0.BackColor = Color.FloralWhite;
+            btnMood0.BackColor = Color.Magenta;
         }
 
         private void btnMood1_Click(object sender, EventArgs e)
         {
             CurrentMood = btnMood1.Text;
             clearColours();
-            btnMood1.BackColor = Color.FloralWhite;
-            Console.WriteLine("Mood set to " + CurrentMood);
+            btnMood1.BackColor = Color.Magenta;
         }
 
+        private void btnMood2_Click_1(object sender, EventArgs e)
+        {
+            CurrentMood = btnMood2.Text;
+            clearColours();
+            btnMood2.BackColor = Color.Magenta;
+        }
+
+        private void btnMood3_Click_1(object sender, EventArgs e)
+        {
+            CurrentMood = btnMood3.Text;
+            clearColours();
+            btnMood3.BackColor = Color.Magenta;
+        }
+
+        private void btnMood4_Click_1(object sender, EventArgs e)
+        {
+            CurrentMood = btnMood4.Text;
+            clearColours();
+            btnMood4.BackColor = Color.Magenta;
+        }
+
+        private void btnMood5_Click_1(object sender, EventArgs e)
+        {
+            CurrentMood = btnMood5.Text;
+            clearColours();
+            btnMood5.BackColor = Color.Magenta;
+        }
 
         public void clearColours()
         {
@@ -59,33 +85,14 @@ namespace MoodTrackerApp
             btnMood4.BackColor = Color.White;
             btnMood5.BackColor = Color.White;
         }
-
-        private void btnMood2_Click_1(object sender, EventArgs e)
+        public void clearEntry()
         {
-            CurrentMood = btnMood2.Text;
             clearColours();
-            btnMood2.BackColor = Color.FloralWhite;
-        }
-
-        private void btnMood3_Click_1(object sender, EventArgs e)
-        {
-            CurrentMood = btnMood3.Text;
-            clearColours();
-            btnMood3.BackColor = Color.FloralWhite;
-        }
-
-        private void btnMood4_Click_1(object sender, EventArgs e)
-        {
-            CurrentMood = btnMood4.Text;
-            clearColours();
-            btnMood4.BackColor = Color.FloralWhite;
-        }
-
-        private void btnMood5_Click_1(object sender, EventArgs e)
-        {
-            CurrentMood = btnMood5.Text;
-            clearColours();
-            btnMood5.BackColor = Color.FloralWhite;
+            CurrentMood = null;
+            numEnergy.Value = 0;
+            numStress.Value = 0;
+            txtNotes.Text = "";
+            dateTimePicker1.Value = DateTime.Now;
         }
     }
 }
