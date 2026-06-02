@@ -22,9 +22,5 @@ namespace MoodTrackerApp
             Energy = energy;
             Notes = notes; //Something to note for here is that this box literally cant take commas for now so we need to make that possible somewwhere along the line k?
         }
-
-
-    }
-
-    
+    }  
 }

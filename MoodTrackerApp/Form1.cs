@@ -17,6 +17,7 @@ namespace MoodTrackerApp
         private void btnSave_Click(object sender, EventArgs e)
         {
             TrackerEntry entry = new TrackerEntry(CurrentMood, (int)numStress.Value, (int)numEnergy.Value, txtNotes.Text);
+            CurrentEntry = entry.ToString();
 
             string filepath = "moodtracker.json";
 
@@ -30,6 +31,9 @@ namespace MoodTrackerApp
 
             }
 
+            listBox1 = new ListBox();
+            listBox1.Items.Add("apple");
+            listBox1.EndUpdate();
             clearEntry();
         }
 
