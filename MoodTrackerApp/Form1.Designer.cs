@@ -47,6 +47,7 @@
             btnMood0 = new Button();
             panel1 = new Panel();
             listBox1 = new ListBox();
+            btnCLear = new Button();
             ((System.ComponentModel.ISupportInitialize)numStress).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numEnergy).BeginInit();
             groupBox1.SuspendLayout();
@@ -133,9 +134,9 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(13, 460);
+            btnSave.Location = new Point(109, 460);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(407, 50);
+            btnSave.Size = new Size(311, 50);
             btnSave.TabIndex = 14;
             btnSave.Text = "Save Entry";
             btnSave.UseVisualStyleBackColor = true;
@@ -218,6 +219,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnCLear);
             panel1.Controls.Add(btnSave);
             panel1.Controls.Add(btnMood0);
             panel1.Controls.Add(txtNotes);
@@ -243,6 +245,17 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(172, 514);
             listBox1.TabIndex = 18;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // btnCLear
+            // 
+            btnCLear.Location = new Point(13, 460);
+            btnCLear.Name = "btnCLear";
+            btnCLear.Size = new Size(90, 50);
+            btnCLear.TabIndex = 16;
+            btnCLear.Text = "Clear";
+            btnCLear.UseVisualStyleBackColor = true;
+            btnCLear.Click += btnCLear_Click;
             // 
             // Form1
             // 
@@ -284,5 +297,6 @@
         private Button btnMood0;
         private Panel panel1;
         private ListBox listBox1;
+        private Button btnCLear;
     }
 }

@@ -14,13 +14,5 @@ namespace MoodTrackerApp
         public int Energy { get; set; }
         public string? Notes { get; set; }
 
-        public TrackerEntry(string? mood, int stress, int energy, string? notes)
-        {
-            Date = DateTime.Now;
-            Mood = mood;
-            Stress = stress;
-            Energy = energy;
-            Notes = notes; //Something to note for here is that this box literally cant take commas for now so we need to make that possible somewwhere along the line k?
-        }
     }  
 }

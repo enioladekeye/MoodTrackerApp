@@ -1,4 +1,5 @@
 using System.IO;
+using System.Text.Json;
 using System.Security.Cryptography.X509Certificates;
 
 namespace MoodTrackerApp
@@ -16,24 +17,22 @@ namespace MoodTrackerApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            TrackerEntry entry = new TrackerEntry(CurrentMood, (int)numStress.Value, (int)numEnergy.Value, txtNotes.Text);
-            CurrentEntry = entry.ToString();
-
-            string filepath = "moodtracker.json";
-
-            if (File.Exists(filepath))
+            var entry = new TrackerEntry
             {
+                Date = dateTimePicker1.Value,
+                Mood = CurrentMood,
+                Stress = (int)numStress.Value,
+                Energy = (int)numEnergy.Value,
+                Notes = txtNotes.Text
+            };
 
-            }
+            // Makes the json file like, easy to read for people?
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string jsonString = JsonSerializer.Serialize(entry, options);
 
-            else
-            {
+            File.WriteAllText("moodtracker.json", jsonString);
 
-            }
-
-            listBox1 = new ListBox();
-            listBox1.Items.Add("apple");
-            listBox1.EndUpdate();
+            addToListBox(entry);
             clearEntry();
         }
 
@@ -42,42 +41,48 @@ namespace MoodTrackerApp
         {
             CurrentMood = btnMood0.Text;
             clearColours();
-            btnMood0.BackColor = Color.Magenta;
+            btnMood0.BackColor = Color.Beige;
         }
 
         private void btnMood1_Click(object sender, EventArgs e)
         {
             CurrentMood = btnMood1.Text;
             clearColours();
-            btnMood1.BackColor = Color.Magenta;
+            btnMood1.BackColor = Color.Beige;
         }
 
         private void btnMood2_Click_1(object sender, EventArgs e)
         {
             CurrentMood = btnMood2.Text;
             clearColours();
-            btnMood2.BackColor = Color.Magenta;
+            btnMood2.BackColor = Color.Beige;
         }
 
         private void btnMood3_Click_1(object sender, EventArgs e)
         {
             CurrentMood = btnMood3.Text;
             clearColours();
-            btnMood3.BackColor = Color.Magenta;
+            btnMood3.BackColor = Color.Beige;
         }
 
         private void btnMood4_Click_1(object sender, EventArgs e)
         {
             CurrentMood = btnMood4.Text;
             clearColours();
-            btnMood4.BackColor = Color.Magenta;
+            btnMood4.BackColor = Color.Beige;
         }
 
         private void btnMood5_Click_1(object sender, EventArgs e)
         {
             CurrentMood = btnMood5.Text;
             clearColours();
-            btnMood5.BackColor = Color.Magenta;
+            btnMood5.BackColor = Color.Beige;
+        }
+
+
+        public void addToListBox(TrackerEntry entry)
+        {
+            listBox1.Items.Add($"{entry.Date.ToShortDateString()} - Mood: {entry.Mood}");
         }
 
         public void clearColours()
@@ -97,6 +102,53 @@ namespace MoodTrackerApp
             numStress.Value = 0;
             txtNotes.Text = "";
             dateTimePicker1.Value = DateTime.Now;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                string selectedItem = listBox1.SelectedItem.ToString() ?? "";
+                string datePart = selectedItem.Split('-')[0].Trim();
+                DateTime selectedDate = DateTime.Parse(datePart);
+                string jsonString = File.ReadAllText("moodtracker.json");
+                TrackerEntry entry = JsonSerializer.Deserialize<TrackerEntry>(jsonString) ?? new TrackerEntry();
+
+                if (entry.Date == selectedDate.Date)
+                {
+                    numEnergy.Value = entry.Energy;
+                    numStress.Value = entry.Stress;
+                    txtNotes.Text = entry.Notes;
+
+                    clearColours();
+                    switch (entry.Mood)
+                    {
+                        case "Very Bad":
+                            btnMood0.BackColor = Color.Beige;
+                            break;
+                        case "Bad":
+                            btnMood1.BackColor = Color.Beige;
+                            break;
+                        case "Neutral":
+                            btnMood2.BackColor = Color.Beige;
+                            break;
+                        case "Good":
+                            btnMood3.BackColor = Color.Beige;
+                            break;
+                        case "Very Good":
+                            btnMood4.BackColor = Color.Beige;
+                            break;
+                        case "Excellent":
+                            btnMood5.BackColor = Color.Beige;
+                            break;
+                    }
+                }
+            }
+        }
+
+        private void btnCLear_Click(object sender, EventArgs e)
+        {
+            clearEntry();
         }
     }
 }
