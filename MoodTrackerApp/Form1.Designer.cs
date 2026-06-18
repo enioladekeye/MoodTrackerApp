@@ -46,8 +46,9 @@
             btnMood5 = new Button();
             btnMood0 = new Button();
             panel1 = new Panel();
-            listBox1 = new ListBox();
             btnCLear = new Button();
+            listBox1 = new ListBox();
+            btnNew = new Button();
             ((System.ComponentModel.ISupportInitialize)numStress).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numEnergy).BeginInit();
             groupBox1.SuspendLayout();
@@ -237,16 +238,6 @@
             panel1.Size = new Size(434, 523);
             panel1.TabIndex = 17;
             // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 12);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(172, 514);
-            listBox1.TabIndex = 18;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
-            // 
             // btnCLear
             // 
             btnCLear.Location = new Point(13, 460);
@@ -257,11 +248,32 @@
             btnCLear.UseVisualStyleBackColor = true;
             btnCLear.Click += btnCLear_Click;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(12, 12);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(172, 439);
+            listBox1.TabIndex = 18;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // btnNew
+            // 
+            btnNew.Location = new Point(12, 472);
+            btnNew.Name = "btnNew";
+            btnNew.Size = new Size(172, 50);
+            btnNew.TabIndex = 19;
+            btnNew.Text = "New Entry";
+            btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnNew_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(648, 547);
+            Controls.Add(btnNew);
             Controls.Add(listBox1);
             Controls.Add(panel1);
             Controls.Add(splitter1);
@@ -298,5 +310,6 @@
         private Panel panel1;
         private ListBox listBox1;
         private Button btnCLear;
+        private Button btnNew;
     }
 }
